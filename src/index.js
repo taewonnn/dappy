@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import NotFound from "./pages/NotFound";
 import Home from "./pages/Home";
 import AllProducts from "./pages/AllProducts";
@@ -30,7 +30,7 @@ const router = createBrowserRouter([
         element: <ProductDetail />,
       },
       {
-        path: '/cart',
+        path: '/carts',
         element: <MyCart />,
       },
     ]
@@ -42,7 +42,7 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
