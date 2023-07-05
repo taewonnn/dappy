@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 import AllProducts from "./pages/AllProducts";
 import ProductDetail from "./pages/ProductDetail";
 import MyCart from "./pages/MyCart";
+import NewProduct from "./pages/NewProduct";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
       {
         path: '/products',
         element: <AllProducts />,
+      },
+      {
+        path: '/products/new',
+        element: <NewProduct />
       },
       {
         path: '/products/:id',
