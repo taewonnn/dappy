@@ -4,8 +4,7 @@ import { FiShoppingBag } from "react-icons/fi";
 
 export default function NavBar() {
   return (
-    <header className='flex justify-between'>
-      <div className='bg-blue-800'>왜 안돼??</div>
+    <header className='flex justify-between border-b border-gray-300'>
       <Link to='/'>
         <FiShoppingBag />
         <h1>Dappy</h1>
