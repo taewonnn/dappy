@@ -23,5 +23,5 @@ export async function login() {
 }
 
 export async function logout() {
-  return signOut().then(() => null);
+  return signOut(auth).then(() => null);
 }
