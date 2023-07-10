@@ -18,7 +18,8 @@ export async function login() {
       const user = result.user;
       console.log(user);
       return user;
-    }).catch((error) => {
+    })
+    .catch((error) => {
       console.error(error);
   });
 }
