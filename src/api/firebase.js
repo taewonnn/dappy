@@ -12,6 +12,7 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth();
 const provider = new GoogleAuthProvider();
 
+// login
 export async function login() {
   return signInWithPopup(auth, provider)
     .then((result) => {
@@ -22,10 +23,12 @@ export async function login() {
     .catch(console.error);
 }
 
+// logout
 export async function logout() {
   return signOut(auth).then(() => null);
 }
 
+// 캐시 저장
 export function onUserStateChange(callback) {
   onAuthStateChanged(auth, (user) => {
     callback(user)
