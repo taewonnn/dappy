@@ -1,12 +1,20 @@
 import { BsFillPencilFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { FiShoppingBag } from "react-icons/fi";
-import { login, logout } from "../api/firebase";
-import { useState } from "react";
+import { login, logout, onUserStateChange } from "../api/firebase";
+import { useEffect, useState } from "react";
 
 export default function NavBar() {
 
   const [user, setUser] = useState();
+
+
+  useEffect(() => {
+    onUserStateChange((user) => {
+      console.log(user);
+      setUser(user);
+    })
+  }, [])
 
   const handleLogin = () => {
     login().then(setUser);
