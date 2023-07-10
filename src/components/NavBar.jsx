@@ -17,11 +17,11 @@ export default function NavBar() {
   }, [])
 
   const handleLogin = () => {
-    login().then(setUser);
+    login();
   }
 
   const handleLogout = () => {
-    logout().then(setUser);
+    logout();
   }
 
   return (

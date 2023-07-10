@@ -13,8 +13,8 @@ const auth = getAuth();
 const provider = new GoogleAuthProvider();
 
 // login
-export async function login() {
-  return signInWithPopup(auth, provider)
+export function login() {
+  signInWithPopup(auth, provider)
     .then((result) => {
       const user = result.user;
       console.log(user);
@@ -24,8 +24,8 @@ export async function login() {
 }
 
 // logout
-export async function logout() {
-  return signOut(auth).then(() => null);
+export function logout() {
+  signOut(auth).then(() => null);
 }
 
 // 캐시 저장
