@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import { getAuth, signInWithPopup, signOut, GoogleAuthProvider } from "firebase/auth";
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
@@ -12,7 +12,7 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth();
 const provider = new GoogleAuthProvider();
 
-export default async function login() {
+export async function login() {
   return signInWithPopup(auth, provider)
     .then((result) => {
       const user = result.user;
@@ -21,4 +21,8 @@ export default async function login() {
     }).catch((error) => {
       console.error(error);
   });
+}
+
+export async function logout() {
+  return signOut().then(() => null);
 }
