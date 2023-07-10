@@ -15,11 +15,11 @@ const provider = new GoogleAuthProvider();
 // login
 export function login() {
   signInWithPopup(auth, provider)
-    .then((result) => {
-      const user = result.user;
-      console.log(user);
-      return user;
-    })
+    // .then((result) => {
+    //   const user = result.user;
+    //   console.log(user);
+    //   return user;
+    // })
     .catch(console.error);
 }
 
