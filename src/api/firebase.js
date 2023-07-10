@@ -19,9 +19,7 @@ export async function login() {
       console.log(user);
       return user;
     })
-    .catch((error) => {
-      console.error(error);
-  });
+    .catch(console.error);
 }
 
 export async function logout() {
