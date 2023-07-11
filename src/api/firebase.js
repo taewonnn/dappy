@@ -1,5 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged } from "firebase/auth";
+import { getDatabase, ref, child, get } from "firebase/database";
+
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
@@ -11,6 +13,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth();
 const provider = new GoogleAuthProvider();
+const database = getDatabase(app);
 
 // login
 export function login() {
@@ -39,10 +42,11 @@ export function onUserStateChange(callback) {
   })
 }
 
-function adminUser() {
+async function adminUser() {
 
   // 2. 사용자가 어드민 권한을 가지고 있는가?? 확인
 
 
   // 3. {...user, isAdmin:  true/false}
+  return get
 }
