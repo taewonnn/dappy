@@ -33,11 +33,11 @@ export function logout() {
 
 // 캐시 저장
 export function onUserStateChange(callback) {
-  onAuthStateChanged(auth, (user) => {
+  onAuthStateChanged(auth, async (user) => {
     // 1. 사용자가 있는 경우에(로그인 한 경우)
-    user && adminUser(user);
-    console.log(user);
-    callback(user)
+    const upadtedUser = user ? await adminUser(user) : null;
+    // console.log(user);
+    callback(upadtedUser);
   })
 }
 
