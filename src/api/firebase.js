@@ -31,6 +31,18 @@ export function logout() {
 // 캐시 저장
 export function onUserStateChange(callback) {
   onAuthStateChanged(auth, (user) => {
+    // 1. 사용자가 있는 경우에(로그인 한 경우)
+
+
+    console.log(user);
     callback(user)
   })
+}
+
+function adminUser() {
+
+  // 2. 사용자가 어드민 권한을 가지고 있는가?? 확인
+
+
+  // 3. {...user, isAdmin:  true/false}
 }
