@@ -24,7 +24,11 @@ const router = createBrowserRouter([
       },
       {
         path: '/products/new',
-        element: <NewProduct />
+        element: (
+          <ProtectedRoute requireAdmin={true}>
+            <NewProduct />
+          </ProtectedRoute>
+            )
       },
       {
         path: '/products/:id',
@@ -32,7 +36,13 @@ const router = createBrowserRouter([
       },
       {
         path: '/carts',
-        element: <MyCart />,
+        // element에 바로 <MyCart/>하면 사용자가 url에 /carts로 입력 시 보여진다.
+        // 이를 방지하기 위해 -> 새로운 컴포넌트로 한 번 감싸서 해당 컴포넌트에서 사용자에 대한 정보(로그인했는지)를 확인하기
+        element: (
+          <ProtectedRoute>
+            <MyCart/>
+          </ProtectedRoute>
+        ),
       },
     ]
   }
