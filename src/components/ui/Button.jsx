@@ -1,6 +1,9 @@
 export default function Button({text, onClick}) {
   return (
-    <button onClick={onClick}>
+    <button
+      className='bg-brand text-white py-2 px-4 rounded-md hover:brightness-125'
+      onClick={onClick}
+    >
       {text}
     </button>
   )
