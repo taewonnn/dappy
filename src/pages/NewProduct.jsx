@@ -44,6 +44,14 @@ export default function NewProduct() {
         required
         onChange={handleChange}
       />
+      <input
+        type='text'
+        name='category'
+        value={product.category ?? ''}
+        placeholder='카테고리'
+        required
+        onChange={handleChange}
+      />
 
     </section>
   )
