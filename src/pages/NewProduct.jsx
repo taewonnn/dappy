@@ -19,11 +19,13 @@ export default function NewProduct() {
 
     // 제품의 사진을 cloudinary에 업로드 하고 url을 획득
 
+
     // Firebase에 새로운 제품을 추가
   }
 
   return (
     <section>
+      { file && <img src={URL.createObjectURL(file)} alt='local file'/> }
       <form onSubmit={handleSubmit}>
         <input
           type='file'
