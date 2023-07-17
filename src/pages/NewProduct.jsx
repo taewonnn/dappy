@@ -60,6 +60,14 @@ export default function NewProduct() {
         required
         onChange={handleChange}
       />
+      <input
+        type='text'
+        name='options'
+        value={product.options ?? ''}
+        placeholder='옵션들(콤마(,)로 구분'
+        required
+        onChange={handleChange}
+      />
 
     </section>
   )
