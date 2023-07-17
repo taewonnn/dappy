@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Button from "../components/ui/Button";
 
 export default function NewProduct() {
   const [product, setProduct] = useState({});
@@ -68,6 +69,7 @@ export default function NewProduct() {
         required
         onChange={handleChange}
       />
+      <Button text={'제품 등록하기'} />
 
     </section>
   )
