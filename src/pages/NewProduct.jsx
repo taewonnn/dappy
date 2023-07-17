@@ -52,6 +52,14 @@ export default function NewProduct() {
         required
         onChange={handleChange}
       />
+      <input
+        type='text'
+        name='description'
+        value={product.description ?? ''}
+        placeholder='제품 설명'
+        required
+        onChange={handleChange}
+      />
 
     </section>
   )
