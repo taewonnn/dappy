@@ -36,6 +36,15 @@ export default function NewProduct() {
         required
         onChange={handleChange}
       />
+      <input
+        type='number'
+        name='price'
+        value={product.price ?? ''}
+        placeholder='가격'
+        required
+        onChange={handleChange}
+      />
+
     </section>
   )
 }
