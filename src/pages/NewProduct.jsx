@@ -36,7 +36,6 @@ export default function NewProduct() {
           required
           onChange={handleChange}
         />
-      </form>
       <input
         type='text'
         name='title'
@@ -78,7 +77,7 @@ export default function NewProduct() {
         onChange={handleChange}
       />
       <Button text={'제품 등록하기'} />
-
+    </form>
     </section>
   )
 }
