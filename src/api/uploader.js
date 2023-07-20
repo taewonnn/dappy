@@ -6,6 +6,7 @@ export async function uploadImage(file) {
   return fetch(process.env.REACT_APP_CLOUDINARY_URL, {
     method: 'POST',
     body: data,
-  }).then((res) => res.json())
+  })
+    .then((res) => res.json())
     .then((data) => data.url);
 }
