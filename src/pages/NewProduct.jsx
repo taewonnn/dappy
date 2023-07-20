@@ -17,8 +17,9 @@ export default function NewProduct() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // 제품의 사진을 cloudinary에 업로드 하고 url을 획득
+        // 제품의 사진을 cloudinary에 업로드 하고 url을 획득
 
+    // a5y2r0t8
 
     // Firebase에 새로운 제품을 추가
   }
