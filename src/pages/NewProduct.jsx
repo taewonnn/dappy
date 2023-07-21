@@ -6,6 +6,8 @@ import { addNewProduct } from "../api/firebase";
 export default function NewProduct() {
   const [product, setProduct] = useState({});
   const [file, setFile] = useState();
+  const [isUploading, setIsUploading] = useState(false);
+  const [sucess, setSucess] = useState();
 
   const handleChange = (e) => {
     const {name, value, files} = e.target;
@@ -21,15 +23,18 @@ export default function NewProduct() {
     // 제품의 사진을 cloudinary에 업로드 하고 url을 획득
     uploadImage(file)
       .then((url) => {
-        console.log(url);
+        // console.log(url);
+
         //  Firebase에 새로운 제품을 추가
         addNewProduct(product, url);
 
       })
   }
-
+성
   return (
     <section>
+      <h2>새로운 제품 등록</h2>
+
       { file && <img src={URL.createObjectURL(file)} alt='local file'/> }
       <form onSubmit={handleSubmit}>
         <input
