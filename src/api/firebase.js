@@ -62,7 +62,7 @@ async function adminUser(user) {
 // 제품 등록 관련
 export async function addNewProduct(product, imageUrl) {
   const id = uuid();
-  set(ref(database, `products/${uuid()}`), {
+  return set(ref(database, `products/${uuid()}`), {
     ...product,
     id,
     price: parseInt(product.price),
