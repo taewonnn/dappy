@@ -34,7 +34,7 @@ export default function NewProduct() {
   return (
     <section>
       <h2>새로운 제품 등록</h2>
-      { sucess && <p>✅ {success}</p>}
+      { success && <p>✅ {success}</p> }
       { file && <img src={URL.createObjectURL(file)} alt='local file'/> }
       <form onSubmit={handleSubmit}>
         <input
@@ -84,7 +84,7 @@ export default function NewProduct() {
         required
         onChange={handleChange}
       />
-      <Button text={'제품 등록하기'} />
+      <Button text={isUploading ? '업로드 중..' : '제품 등록하기'} />
     </form>
     </section>
   )
