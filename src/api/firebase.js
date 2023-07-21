@@ -65,5 +65,8 @@ export async function addNewProduct(product, imageUrl) {
   set(ref(database, `products/${uuid()}`), {
     ...product,
     id,
+    price: parseInt(product.price),
+    image: imageUrl,
+    options: product.options.split(','),
   })
 }
