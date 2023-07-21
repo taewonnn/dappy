@@ -56,3 +56,9 @@ async function adminUser(user) {
     return user;
   })
 }
+
+
+// 제품 등록 관련
+export async function addNewProduct(product, imageUrl) {
+
+}
