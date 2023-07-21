@@ -38,7 +38,6 @@ export default function NewProduct() {
       })
       .finally(() => setIsUploading(false));
   }
-성
   return (
     <section>
       <h2>새로운 제품 등록</h2>
