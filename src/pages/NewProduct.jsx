@@ -7,7 +7,7 @@ export default function NewProduct() {
   const [product, setProduct] = useState({});
   const [file, setFile] = useState();
   const [isUploading, setIsUploading] = useState(false);
-  const [sucess, setSucess] = useState();
+  const [success, setSuccess] = useState();
 
   const handleChange = (e) => {
     const {name, value, files} = e.target;
@@ -34,7 +34,7 @@ export default function NewProduct() {
   return (
     <section>
       <h2>새로운 제품 등록</h2>
-
+      { sucess && <p>✅ {success}</p>}
       { file && <img src={URL.createObjectURL(file)} alt='local file'/> }
       <form onSubmit={handleSubmit}>
         <input
