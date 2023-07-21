@@ -20,15 +20,23 @@ export default function NewProduct() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setIsUploading(true);
     // 제품의 사진을 cloudinary에 업로드 하고 url을 획득
     uploadImage(file)
       .then((url) => {
         // console.log(url);
 
         //  Firebase에 새로운 제품을 추가
-        addNewProduct(product, url);
+        addNewProduct(product, url)
+          .then(() => {
+            setSuccess('성공적으로 제품이 추가되었습니다');
+            setTimeout(() => {
+              setSuccess(null);
+            }, 4000)
+          })
 
       })
+      .finally(() => setIsUploading(false));
   }
 성
   return (
@@ -84,7 +92,10 @@ export default function NewProduct() {
         required
         onChange={handleChange}
       />
-      <Button text={isUploading ? '업로드 중..' : '제품 등록하기'} />
+      <Button
+        text={isUploading ? '업로드 중..' : '제품 등록하기'}
+        disabled={isUploading}
+      />
     </form>
     </section>
   )
