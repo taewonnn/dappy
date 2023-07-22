@@ -42,6 +42,7 @@ export function onUserStateChange(callback) {
   })
 }
 
+// 어드민유저 판별
 async function adminUser(user) {
 
   // 2. 사용자가 어드민 권한을 가지고 있는가?? 확인
