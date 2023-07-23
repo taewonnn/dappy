@@ -20,6 +20,7 @@ export default function NewProduct() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    // 버튼이 비활성화
     setIsUploading(true);
     // 제품의 사진을 cloudinary에 업로드 하고 url을 획득
     uploadImage(file)
