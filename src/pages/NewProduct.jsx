@@ -29,6 +29,8 @@ export default function NewProduct() {
         //  Firebase에 새로운 제품을 추가
         addNewProduct(product, url)
           .then(() => {
+            // 제품등록 완료된 경우) 안내
+            // 4초 뒤엔 자동으로 초기화
             setSuccess('성공적으로 제품이 추가되었습니다');
             setTimeout(() => {
               setSuccess(null);
