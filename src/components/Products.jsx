@@ -1,5 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { getProducts } from "../api/firebase";
+import ProductCard from "./ProductCard";
 
 export default function Products() {
 
