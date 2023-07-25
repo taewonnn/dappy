@@ -6,7 +6,7 @@ export default function ProductCard({ product: { id, image, title, category, pri
         <h3 className='truncate'>{title}</h3>
         <p>{`₩${price}`}</p>
       </div>
-      <p>{category}</p>
+      <p className='mb-2 px-2 text-gray-600'>{category}</p>
     </li>
   )
 }
