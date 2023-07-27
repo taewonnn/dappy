@@ -3,19 +3,17 @@ import { useState } from "react";
 
 export default function ProductDetail() {
 
-  const [selected, setSelected] = useState(options && options[0]);
-
-  const handleSelect = () => {
-
-  }
-
   const {
     state: {
       product: { id, image, title, description, category, price, options }
     }
   } = useLocation();
 
+  const [selected, setSelected] = useState(options && options[0]);
 
+  const handleSelect = (e) => {
+    setSelected(e.target.value);
+  }
 
 
   return (
@@ -28,7 +26,7 @@ export default function ProductDetail() {
         <p>{description}</p>
         <p>옵션 :</p>
         <select onChange={handleSelect} value={selected}>
-          {options && options.map((option, index) => <option key={index} />)}
+          {options && options.map((option, index) => <option key={index}>{option}</option>)}
         </select>
       </div>
     </section>
