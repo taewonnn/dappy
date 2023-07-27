@@ -27,9 +27,9 @@ export default function ProductDetail() {
       <section className='flex flex-col md:flex-row p-4'>
         <img  className='w-full px-4 basis-7/12' src={image} alt={title}/>
         <div className='w-full basis-5/12 flex flex-col p-4'>
-          <h2>{title}</h2>
-          <p>{price}</p>
-          <p>{description}</p>
+          <h2 className='text-3xl font-bold py-2 '>{title}</h2>
+          <p className='text-2xl font-bold py-2 border-b border-gray-400'>{price}</p>
+          <p className='py-4 text-lg'>{description}</p>
           <p>옵션 :</p>
           <select onChange={handleSelect} value={selected}>
             {options && options.map((option, index) => <option key={index}>{option}</option>)}
