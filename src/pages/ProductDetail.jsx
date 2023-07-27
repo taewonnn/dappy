@@ -15,6 +15,10 @@ export default function ProductDetail() {
     setSelected(e.target.value);
   }
 
+  const handleClick = () => {
+
+  }
+
 
   return (
     <section>
@@ -28,6 +32,7 @@ export default function ProductDetail() {
         <select onChange={handleSelect} value={selected}>
           {options && options.map((option, index) => <option key={index}>{option}</option>)}
         </select>
+        <Button text='장바구니에 추가' onClick={handleClick}/>
       </div>
     </section>
   )
