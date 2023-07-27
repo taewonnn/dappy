@@ -24,9 +24,9 @@ export default function ProductDetail() {
 
   return (<>
       <p className='mx-12 mt-4 text-gray-700'>{category}</p>
-      <section className='flex flex-col md:flex-row'>
-        <img src={image} alt={title}/>
-        <div>
+      <section className='flex flex-col md:flex-row p-4'>
+        <img  className='w-full px-4 basis-7/12' src={image} alt={title}/>
+        <div className='w-full basis-5/12 flex flex-col p-4'>
           <h2>{title}</h2>
           <p>{price}</p>
           <p>{description}</p>
