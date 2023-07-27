@@ -15,7 +15,8 @@ export default function ProductDetail() {
     setSelected(e.target.value);
   }
 
-  const handleClick = () => {
+  const handleClick = (e) => {
+  // 장바구니에 추가 로직
 
   }
 
