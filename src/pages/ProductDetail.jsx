@@ -5,6 +5,10 @@ export default function ProductDetail() {
 
   const [selected, setSelected] = useState(options && options[0]);
 
+  const handleSelect = () => {
+
+  }
+
   const {
     state: {
       product: { id, image, title, description, category, price, options }
@@ -23,7 +27,9 @@ export default function ProductDetail() {
         <p>{price}</p>
         <p>{description}</p>
         <p>옵션 :</p>
-        <select></select>
+        <select onChange={handleSelect} value={selected}>
+          {options && options.map((option, index) => <option key={index} />)}
+        </select>
       </div>
     </section>
   )
