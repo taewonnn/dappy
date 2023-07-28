@@ -87,7 +87,7 @@ export async function getProducts() {
 
 
 // 장바구니 가져오기
-export async function getCart() {
+export async function getCart(userId) {
   return get(ref(database, `carts/${userId}`))
     .then(snapshot => {
       const items = snapshot.val() || {};
@@ -100,4 +100,5 @@ export async function addOrUpdateToCart(userId, product) {
   return set(ref(database, `carts/${userId}/${product.id}`), product);
 }
 
+// 장바구니 삭제하기
 
