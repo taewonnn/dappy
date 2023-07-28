@@ -84,3 +84,9 @@ export async function getProducts() {
       return [];
     })
 }
+
+
+// 장바구니 추가
+export async function getCart() {
+  return ()
+}
