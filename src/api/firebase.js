@@ -94,3 +94,8 @@ export async function getCart() {
       return Object.values(items);
     })
 }
+
+// 장바구니 추가하기
+export async function addOrUpdateToCart(userId,) {
+  return ()
+}
