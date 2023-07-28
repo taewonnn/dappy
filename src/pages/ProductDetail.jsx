@@ -1,8 +1,11 @@
 import { useLocation } from "react-router-dom";
 import { useState } from "react";
 import Button from "../components/ui/Button";
+import { useAuthContext } from "../context/AuthContext";
 
 export default function ProductDetail() {
+
+  const { user: { uid } } =useAuthContext();
 
   const {
     state: {
