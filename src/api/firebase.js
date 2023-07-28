@@ -86,7 +86,7 @@ export async function getProducts() {
 }
 
 
-// 장바구니 추가
+// 장바구니 가져오기
 export async function getCart() {
   return get(ref(database, `carts/${userId}`))
     .then(snapshot => {
