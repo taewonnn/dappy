@@ -96,6 +96,8 @@ export async function getCart() {
 }
 
 // 장바구니 추가하기
-export async function addOrUpdateToCart(userId,) {
-  return ()
+export async function addOrUpdateToCart(userId, product) {
+  return set(ref(database, `carts/${userId}/${product.id}`), product);
 }
+
+
