@@ -9,8 +9,7 @@ export default function CartStatus() {
   return (
     <>
       <AiOutlineShoppingCart />
-
-      cartStatus
+      { products && <p>{products.length}</p>}
     </>
   )
 }
