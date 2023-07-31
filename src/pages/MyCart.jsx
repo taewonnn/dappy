@@ -15,11 +15,11 @@ export default function MyCart() {
   return (
     <section>
       <p>나의 장바구니</p>
-      {hasProducts && <p>장바구니에 상품이 없습니다!!</p>}
-      {products &&
+      {!hasProducts && <p>장바구니에 상품이 없습니다!!</p>}
+      {products &&(
         products.map((product) => (
           <CartItem key={product.id} product={product} />
-        ))}
+        )))}
       </section>
   );
 }
