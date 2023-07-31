@@ -12,8 +12,14 @@ export default function MyCart() {
   const hasProducts = products && products.length > 0;
 
   return (
-    <>
-      MyCart
-    </>
+    <section>
+      <p>나의 장바구니</p>
+      {hasProducts && <p>장바구니에 상품이 없습니다!!</p>}
+      {hasProducts && <>
+        <ul>
+          {products && products.map((product) => <CartItem />)
+        </ul>
+      </>}
+    </section>
   )
 }
