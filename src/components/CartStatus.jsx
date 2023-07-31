@@ -6,7 +6,7 @@ import { useAuthContext } from "../context/AuthContext";
 export default function CartStatus() {
 
   const { uid } = useAuthContext();
-  const { data: products } = useQuery(['carts'], getCart);
+  const { data: products } = useQuery(['carts'], () => getCart(uid));
 
   return (
     <>
