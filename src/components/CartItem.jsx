@@ -2,6 +2,19 @@ import { AiOutlineMinusSquare, AiOutlinePlusSquare } from "react-icons/ai";
 import { RiDeleteBin5Fill } from "react-icons/ri";
 
 export default function CartItem({ product, product: {id, image, title, option, quantity, price} }) {
+
+  const handleMinus = (e) => {
+
+  }
+
+  const handlePlus = (e) => {
+
+  }
+
+  const handleDelete = (e) => {
+
+  }
+
   return (
     <li>
       <img src={image} alt={title} />
@@ -9,10 +22,10 @@ export default function CartItem({ product, product: {id, image, title, option, 
         <p>{title}</p>
         <p>{option}</p>
         <div>
-          <AiOutlineMinusSquare />
+          <AiOutlineMinusSquare onClick={handleMinus}/>
           <span>{quantity}</span>
-          <AiOutlinePlusSquare />
-          <RiDeleteBin5Fill />
+          <AiOutlinePlusSquare onClick={handlePlus} />
+          <RiDeleteBin5Fill onClick={handleDelete} />
         </div>
       </div>
     </li>
