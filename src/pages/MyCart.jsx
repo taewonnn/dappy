@@ -11,7 +11,9 @@ export default function MyCart() {
   if (isLoading) return <p>Loading...</p>;
 
   const hasProducts = products && products.length > 0;
-  const totalPrice = products && products.reduce((prev, current) => prev + parseInt(current.price) * current.quantity)
+  const totalPrice = products &&
+    products.reduce(
+      (prev, current) => prev + parseInt(current.price) * current.quantity, 0)
 
   return (
     <section>
