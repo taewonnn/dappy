@@ -11,7 +11,6 @@ export default function CartItem({ product, product: {id, image, title, option, 
 
   const handlePlus = (e) => addOrUpdateToCart(uid, { ...product, quantity: quantity + 1 })
 
-
   const handleDelete = () => addOrUpdateToCart(uid, id);
 
 
