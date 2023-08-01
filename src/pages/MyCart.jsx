@@ -4,6 +4,7 @@ import { getCart } from "../api/firebase";
 import CartItem from "../components/Cartitem";
 import { BsFillPlusCircleFill } from "react-icons/bs";
 import { FaEquals } from "react-icons/fa";
+import PriceCard from "../components/PriceCard";
 
 const SHIPPING = 3000;
 export default function MyCart() {
