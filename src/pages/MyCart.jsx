@@ -11,6 +11,7 @@ export default function MyCart() {
   if (isLoading) return <p>Loading...</p>;
 
   const hasProducts = products && products.length > 0;
+  const totalPrice = products && products.reduce((prev, current) => prev + parseInt(current.price))
 
   return (
     <section>
@@ -25,6 +26,9 @@ export default function MyCart() {
               ))
             }
           </ul>
+          <div>
+            <PriceCard text='상품 총액' price={totalPrice} />
+          </div>
         </>
         )}
       </section>
