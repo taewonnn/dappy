@@ -2,6 +2,7 @@ import { useAuthContext } from "../context/AuthContext";
 import { useQuery } from "@tanstack/react-query";
 import { getCart } from "../api/firebase";
 import CartItem from "../components/Cartitem";
+import { BsFillPlusCircleFill } from "react-icons/bs";
 
 export default function MyCart() {
 
@@ -30,6 +31,7 @@ export default function MyCart() {
           </ul>
           <div>
             <PriceCard text='상품 총액' price={totalPrice} />
+            <BsFillPlusCircleFill />
           </div>
         </>
         )}
