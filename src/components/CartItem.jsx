@@ -15,11 +15,14 @@ export default function CartItem({ product, product: {id, image, title, option, 
 
 
   return (
-    <li className='flex justify-between'>
-      <img src={image} alt={title} />
-      <div>
-        <p>{title}</p>
-        <p>{option}</p>
+    <li className='flex justify-between my-2 items-center'>
+      <img className='w-24 md:w-48 rounded-lg' src={image} alt={title} />
+      <div className='flex justify-between'>
+        <div className='basis-3/5'>
+          <p>{title}</p>
+          <p>{option}</p>
+          <p>{price}</p>
+        </div>
         <div>
           <AiOutlineMinusSquare onClick={handleMinus}/>
           <span>{quantity}</span>
