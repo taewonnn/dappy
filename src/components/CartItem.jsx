@@ -28,8 +28,8 @@ export default function CartItem({ product, product: {id, image, title, option, 
         <div className='text-2xl flex items-center'>
           <AiOutlineMinusSquare className={ICON_CLASS} onClick={handleMinus}/>
           <span>{quantity}</span>
-          <AiOutlinePlusSquare className={ICON_CLASS}  onClick={handlePlus} />
-          <RiDeleteBin5Fill onClick={handleDelete} />
+          <AiOutlinePlusSquare className={ICON_CLASS} onClick={handlePlus} />
+          <RiDeleteBin5Fill className={ICON_CLASS} onClick={handleDelete} />
         </div>
       </div>
     </li>
