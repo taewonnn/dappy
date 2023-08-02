@@ -20,7 +20,7 @@ export default function MyCart() {
       (prev, current) => prev + parseInt(current.price) * current.quantity, 0)
 
   return (
-    <section>
+    <section className='p-8'>
       <p>나의 장바구니</p>
       {!hasProducts && <p>장바구니에 상품이 없습니다!!</p>}
       {products && (
