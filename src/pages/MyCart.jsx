@@ -32,7 +32,7 @@ export default function MyCart() {
               ))
             }
           </ul>
-          <div className='flex justify-between items-center'>
+          <div className='flex justify-between items-center px-2 md:px-8 lg:px-16'>
             <PriceCard text='상품 총액' price={totalPrice} />
             <BsFillPlusCircleFill className='shrink-0'/>
             <PriceCard text='배송비' price={SHIPPING} />
