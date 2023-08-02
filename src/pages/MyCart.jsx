@@ -21,7 +21,7 @@ export default function MyCart() {
 
   return (
     <section className='p-8'>
-      <p>나의 장바구니</p>
+      <p className='tex-2xl text-center font-bold pb-4 border-b border-gray-300 '>나의 장바구니</p>
       {!hasProducts && <p>장바구니에 상품이 없습니다!!</p>}
       {products && (
         <>
