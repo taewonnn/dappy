@@ -2,6 +2,8 @@ import { AiOutlineMinusSquare, AiOutlinePlusSquare } from "react-icons/ai";
 import { RiDeleteBin5Fill } from "react-icons/ri";
 import { addOrUpdateToCart } from "../api/firebase";
 
+
+const ICON_CLASS = 'transition-all cursor-pointer  hover:text-brand hover:scale-105 mx-1'
 export default function CartItem({ product, product: {id, image, title, option, quantity, price}, uid }) {
 
   const handleMinus = (e) => {
@@ -24,9 +26,9 @@ export default function CartItem({ product, product: {id, image, title, option, 
           <p>{price}</p>
         </div>
         <div className='text-2xl flex items-center'>
-          <AiOutlineMinusSquare className='transition-all cursor-pointer  hover:text-brand hover:scale-105 mx-1' onClick={handleMinus}/>
+          <AiOutlineMinusSquare className={ICON_CLASS} onClick={handleMinus}/>
           <span>{quantity}</span>
-          <AiOutlinePlusSquare onClick={handlePlus} />
+          <AiOutlinePlusSquare className={ICON_CLASS}  onClick={handlePlus} />
           <RiDeleteBin5Fill onClick={handleDelete} />
         </div>
       </div>
