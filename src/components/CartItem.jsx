@@ -15,7 +15,7 @@ export default function CartItem({ product, product: {id, image, title, option, 
 
 
   return (
-    <li>
+    <li className='flex justify-between'>
       <img src={image} alt={title} />
       <div>
         <p>{title}</p>
