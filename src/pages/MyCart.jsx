@@ -25,7 +25,7 @@ export default function MyCart() {
       {!hasProducts && <p>장바구니에 상품이 없습니다!!</p>}
       {products && (
         <>
-          <ul>
+          <ul className='border-b border-gray-300 mb-8 p-4 px-8'>
             {products &&
               products.map((product) => (
                 <CartItem key={product.id} product={product} uid={uid} />
