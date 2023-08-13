@@ -12,6 +12,8 @@ export default function MyCart() {
 
   // id 임의 생성
   const {uid} = useAuthContext();
+
+  // useQuery
   const {isLoading, data: products} = useQuery(['carts'], () => getCart(uid));
 
   if (isLoading) return <p>Loading...</p>;
