@@ -10,6 +10,7 @@ import Button from "../components/ui/Button";
 const SHIPPING = 3000;
 export default function MyCart() {
 
+  // id 임의 생성
   const {uid} = useAuthContext();
   const {isLoading, data: products} = useQuery(['carts'], () => getCart(uid));
 
