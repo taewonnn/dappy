@@ -97,10 +97,12 @@ export async function getCart(userId) {
     })
 }
 
+
 // 장바구니 추가하기
 export async function addOrUpdateToCart(userId, product) {
   return set(ref(database, `carts/${userId}/${product.id}`), product);
 }
+
 
 // 장바구니 삭제하기
 export async function removeFromCart(userId, productId) {
