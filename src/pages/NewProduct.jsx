@@ -11,7 +11,7 @@ export default function NewProduct() {
   const [success, setSuccess] = useState();
 
   // useMutate
-  const addProduct = useMutation(({ product, url }) => { addNewProduct(product, url)});
+  const addProduct = useMutation(({ product, url }) => addNewProduct(product, url));
   const handleChange = (e) => {
     const {name, value, files} = e.target;
     if (name === 'file') {
