@@ -2,6 +2,7 @@ import { useState } from "react";
 import Button from "../components/ui/Button";
 import { uploadImage } from "../api/uploader";
 import { addNewProduct } from "../api/firebase";
+import { useMutation } from "@tanstack/react-query";
 
 export default function NewProduct() {
   const [product, setProduct] = useState({});
@@ -9,6 +10,8 @@ export default function NewProduct() {
   const [isUploading, setIsUploading] = useState(false);
   const [success, setSuccess] = useState();
 
+  // useMutate
+  const addProduct = useMutation(({ product, url }) => { addNewProduct(product, url)});
   const handleChange = (e) => {
     const {name, value, files} = e.target;
     if (name === 'file') {
