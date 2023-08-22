@@ -13,7 +13,7 @@ export default function NewProduct() {
   // useMutate
   const queryClient = useQueryClient();
   const addProduct = useMutation(({ product, url }) => addNewProduct(product, url), {
-    onSuccess: () => queryClient.invalidateQueries()
+    onSuccess: () => queryClient.invalidateQueries(['products']),
     });
   const handleChange = (e) => {
     const {name, value, files} = e.target;
